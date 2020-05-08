@@ -1,0 +1,42 @@
+{% extends 'credits/base.html' %}
+
+{% block content %}
+
+<h1 class="display-4">Créditos solicitados<h1>
+<br>
+
+{% load static %}
+
+<div class="container-md">
+  <!-- Content here -->
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">HIJOS</th>
+      <th scope="col">CREDITO</th>
+      <th scope="col">EDAD</th>
+      <th scope="col">TIEMPO_EN_EMPRESA</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for user in data %}
+    <tr>
+    {% for attr in user %}
+      <td>{{attr}}</td>
+    {% endfor %}
+    <td>
+      <form class="" action="prediction" method="get">
+        <input type="submit" name="" value="Realizar estudio" class="btn btn-secondary">
+      </form>
+    </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<br>
+</div>
+
+
+{% endblock %}
